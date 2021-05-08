@@ -7,7 +7,7 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "Modular Telegram bot for managing your groups with a few extras features.",
+   "description": "Bot Modular dengan fitur lebih untuk membantu kinerja grup kamu.",
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
@@ -24,7 +24,7 @@
          "required": true
       },
       "BAN_STICKER": {
-         "description": "ID of the sticker you want to use when banning people.",
+         "description": "ID stiker yang ingin Anda gunakan saat ban orang.",
          "required": false,
          "value": ""
       },
@@ -44,11 +44,11 @@
          "value": ""	
       },
       "ENV": {
-         "description": "Setting this to ANYTHING will enable environment variables.",
+         "description": "Setting ini ke ANYTHING will enable environment variables.",
          "value": "ANYTHING"
       },
       "KICK_STICKER": {
-         "description": "ID of the sticker you want to use when kicking people.",
+         "description": "ID stiker yang ingin Anda gunakan saat menendang orang.",
          "required": false,
          "value": ""
       },
@@ -58,33 +58,33 @@
          "value": "sqldbtype://username:pw@hostname:port/db_name"
       },      
       "OWNER_ID": {
-         "description": "Your user ID as an integer.",
+         "description": "ID kamu sebagai pemilik sekaligus pembuat.",
          "value": "1118936839"
       },
       "OWNER_NAME": {
-         "description": "Your Name",
+         "description": "Nama kamu",
          "value": "✰Sᴀͥʀᴀͣᴛͫʜ™️✰"
       },
       "DEV_USERS": {
-         "description": "ID of users who are Dev (can use /py etc.)",
+         "description": "ID untuk users who are Dev (can use /py etc.)",
          "required": false,
          "value": "1118936839"
       },
       "CASH_API_KEY": {
-         "description": "Required for currency converter",
+         "description": "Diperlukan untuk currency converter",
          "required": false,
          "value": "-xyz"
       },
       "TIME_API_KEY": {
-         "description": "Required for timezone information",
+         "description": "Diperlukan untuk timezone information",
          "value": "-xyz"
       },
        "LASTFM_API_KEY": {
-         "description": "Required for lastfm plugin",
+         "description": "Diperlukan untuk lastfm plugin",
          "value": "-xyz"
       },
        "START_IMG": {
-         "description": "Image shows when hit /start",
+         "description": "letak disini sebuah gambar untuk awalan /start di bot",
          "value": "https://telegra.ph/file/511ad504656e712b88235.jpg"    
       },
       "API_OPENWEATHER": {
@@ -106,43 +106,43 @@
          "value": "True"
       },
       "SUDO_USERS": {
-         "description": "A space separated list of user IDs who you want to assign as sudo users.",
+         "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai pengguna sudo.",
          "required": false,
          "value": "1118936839"
       },
       "SUPPORT_USERS": {
-         "description": "A space separated list of user IDs who you wanna assign as support users(gban perms only).",
+         "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai pengguna dukungan (khusus gban perms).",
          "required": false,
          "value": "1118936839"
       },
      
       "TOKEN": {
-         "description": "Your bot token.",
+         "description": "bot token.",
          "required": true,
          "value": ""
       },
       "URL": {
-         "description": "The Heroku App URL :-  https://<appname>.herokuapp.com/",
+         "description": "Isi Heroku App URL :-  https://<appname>.herokuapp.com/",
          "required": false,
          "value": ""
       },
       "WEBHOOK": {
-         "description": "Setting this to ANYTHING will enable webhooks.",
+         "description": "Setting ke ANYTHING akan mengaktifkan webhook.",
          "required": false,
          "value": ""
       },
       "WHITELIST_USERS": {
-         "description": "A space separated list of user IDs who you want to assign as whitelisted - can't be banned with your bot.",
+         "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai daftar putih - tidak dapat diblokir dengan bot Anda.",
          "required": false,
          "value": "1118936839"
       },
       "WALL_API":{
-         "description": "Enter wall api",
+         "description": "Kirim wall api",
          "required": false,
          "value": ""
       },
       "LYDIA_API": {
-         "description": "Put here lydia API.",
+         "description": "Letak disini lydia API.",
          "required": false,
          "value": " " 
       }
@@ -164,7 +164,7 @@
     }
   ],
    "name": "Cinderella",
-   "repository": "https://github.com/Sur-vivor/CiderellaProBot",
-   "success_url": "https://telegram.dog/CinderellaProBot",
-   "logo": "https://telegra.ph/file/511ad504656e712b88235.jpg"
+   "repository": "https://github.com/Yunus-ZEND/Mighty-Warrior",
+   "success_url": "https://telegram.dog/Mighty-Warrior",
+   "logo": "https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg"
 }
