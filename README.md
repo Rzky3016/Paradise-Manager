@@ -22,15 +22,15 @@
 <p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/MightyWarriorBot"> <img src="https://img.shields.io/badge/Click%20Untuk%20Deploy-green?style=flat&logo=heroku" width="200" height="32.45" /></a></p>
 
 #### class Development(Config):
-   - OWNER_ID = 1118936839  # my telegram ID
-   - OWNER_USERNAME = "Sur_vivor"  # my telegram username
-   - API_KEY = "your bot api key"  # my api key, as provided by the botfather
-   - SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
-   - MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
-   - USE_MESSAGE_DUMP = True
-   - SUDO_USERS = []  # List of id's for users which have sudo access to the bot.
-   - LOAD = []
-   - NO_LOAD = ['translation']
+   - `OWNER_ID` = 1118936839  # my telegram ID
+   - `OWNER_USERNAME` = "Sur_vivor"  # my telegram username
+   - `API_KEY` = "your bot api key"  # my api key, as provided by the botfather
+   - `SQLALCHEMY_DATABASE_URI` = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
+   - `MESSAGE_DUMP` = '-1234567890' # some group chat that your bot is a member of
+   - `USE_MESSAGE_DUMP` = True
+   - `SUDO_USERS` = []  # List of id's for users which have sudo access to the bot.
+   - `LOAD` = []
+   - `NO_LOAD` = ['translation']
 ```
 
 If you can't have a config.py file (EG on heroku), it is also possible to use environment variables.
