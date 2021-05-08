@@ -1,51 +1,36 @@
-### @CinderellaProBot // http://www.telegram.dog/CinderellaProBot
-> with HunterxHunter theme.
+<h2 align="center">MIGHTY WARRIOR</h2>
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)  
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-Modular Telegram bot for managing your groups with a extras features with HunterxHunter theme.
+### Bot modular yg bisa membantu kinerja grupmu dengan berbagai fitur lebih
 
 <p align="center">
-  <a href="https://github.com/Sur-vivor/CinderellaProBot/fork">
-    <img src="https://img.shields.io/github/forks/Sur-vivor/CinderellaProBot?label=Fork&style=social">
+  <a href="https://github.com/Yunus-ZEND/MightyWarriorBot/fork">
+    <img src="https://img.shields.io/github/forks/Yunus-ZEND/MightyWarriorBot?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/Sur-vivor/CinderellaProBot">
-    <img src="https://img.shields.io/github/stars/Sur-vivor/CinderellaProBot?style=social">
+  <a href="https://github.com/Yunus-ZEND/MightyWarriorBot">
+    <img src="https://img.shields.io/github/stars/Yunus-ZEND/MightyWarriorBot?style=social">
   </a>
 </p>
 
-### Click Below Image to Deploy
-[![Deploy](https://telegra.ph/file/511ad504656e712b88235.jpg)](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
+![Mighty Warrior Logo](https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg)
 
-### Configuration
+### <h3 align="center">DEPLOY KE HEROKU</h3>
 
-There are two possible ways of configuring your bot: a config.py file, or ENV variables.
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/MightyWarriorBot"> <img src="https://img.shields.io/badge/Click%20Untuk%20Deploy-green?style=flat&logo=heroku" width="200" height="32.45" /></a></p>
 
-The prefered version is to use a `config.py` file, as it makes it easier to see all your settings grouped together.
-This file should be placed in your `cinderella` folder, alongside the `__main__.py` file . 
-This is where your bot token will be loaded from, as well as your database URI (if you're using a database), and most of 
-your other settings.
-
-It is recommended to import sample_config and extend the Config class, as this will ensure your config contains all 
-defaults set in the sample_config, hence making it easier to upgrade.
-
-An example `config.py` file could be:
-```
-from cinderella.sample_config import Config
-
-
-class Development(Config):
-    OWNER_ID = 1118936839  # my telegram ID
-    OWNER_USERNAME = "Sur_vivor"  # my telegram username
-    API_KEY = "your bot api key"  # my api key, as provided by the botfather
-    SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
-    MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
-    USE_MESSAGE_DUMP = True
-    SUDO_USERS = []  # List of id's for users which have sudo access to the bot.
-    LOAD = []
-    NO_LOAD = ['translation']
+#### class Development(Config):
+   - OWNER_ID = 1118936839  # my telegram ID
+   - OWNER_USERNAME = "Sur_vivor"  # my telegram username
+   - API_KEY = "your bot api key"  # my api key, as provided by the botfather
+   - SQLALCHEMY_DATABASE_URI = 'postgresql://username:password@localhost:5432/database'  # sample db credentials
+   - MESSAGE_DUMP = '-1234567890' # some group chat that your bot is a member of
+   - USE_MESSAGE_DUMP = True
+   - SUDO_USERS = []  # List of id's for users which have sudo access to the bot.
+   - LOAD = []
+   - NO_LOAD = ['translation']
 ```
 
 If you can't have a config.py file (EG on heroku), it is also possible to use environment variables.
@@ -78,54 +63,7 @@ The following env variables are supported:
  accesses, and the way python asynchronous calls work.
  - `BAN_STICKER`: Which sticker to use when banning people.
  - `ALLOW_EXCL`: Whether to allow using exclamation marks ! for commands as well as /.
+```
+<p align="center"><a href="https://t.me/ZendYNS"><img src="https://img.shields.io/badge/My%20Contact%3F-click here-magenta?&style=flat-square?&logo=telegram" width=150px></a></p> <p align="center"><a href="https://t.me/KingUserbotSupport"><img src="https://img.shields.io/badge/Group%20Support%3F-click here-yellow?&style=flat-square?&logo=telegram" width=170px></a></p>
 
-### Python dependencies
-
-Install the necessary python dependencies by moving to the project directory and running:
-
-`pip3 install -r requirements.txt`.
-
-This will install all necessary python packages.
-
-### Database
-
-If you wish to use a database-dependent module (eg: locks, notes, userinfo, users, filters, welcomes),
-you'll need to have a database installed on your system. I use postgres, so I recommend using it for optimal compatibility.
-
-In the case of postgres, this is how you would set up a the database on a debian/ubuntu system. Other distributions may vary.
-
-- install postgresql:
-
-`sudo apt-get update && sudo apt-get install postgresql`
-
-- change to the postgres user:
-
-`sudo su - postgres`
-
-- create a new database user (change YOUR_USER appropriately):
-
-`createuser -P -s -e YOUR_USER`
-
-This will be followed by you needing to input your password.
-
-- create a new database table:
-
-`createdb -O YOUR_USER YOUR_DB_NAME`
-
-Change YOUR_USER and YOUR_DB_NAME appropriately.
-
-- finally:
-
-`psql YOUR_DB_NAME -h YOUR_HOST YOUR_USER`
-
-This will allow you to connect to your database via your terminal.
-By default, YOUR_HOST should be 0.0.0.0:5432.
-
-You should now be able to build your database URI. This will be:
-
-`sqldbtype://username:pw@hostname:port/db_name`
-
-Replace sqldbtype with whichever db youre using (eg postgres, mysql, sqllite, etc)
-repeat for your username, password, hostname (localhost?), port (5432?), and db name.
-
-
+#### anda bisa melihat saya di telegram [@Mightygrouphelp_bot](https://t.me/Mightygrouphelp_bot)
