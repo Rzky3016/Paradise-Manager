@@ -63,7 +63,7 @@
       },
       "OWNER_NAME": {
          "description": "Nama kamu",
-         "value": "✰Sᴀͥʀᴀͣᴛͫʜ™️✰"
+         "value": "Yunus Zend"
       },
       "DEV_USERS": {
          "description": "ID untuk users who are Dev (can use /py etc.)",
@@ -85,7 +85,7 @@
       },
        "START_IMG": {
          "description": "letak disini sebuah gambar untuk awalan /start di bot",
-         "value": "https://telegra.ph/file/511ad504656e712b88235.jpg"    
+         "value": "https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg"    
       },
       "API_OPENWEATHER": {
          "description": "Required for weather information",
