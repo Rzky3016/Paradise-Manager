@@ -27,27 +27,33 @@ from cinderella.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-_Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
-_Maintained by_ [{}](tg://user?id={})
+*┗┓| MIGHTY HELPER GROUP | ┏┛*
+
+_Hallo_ *{}* 🙋‍♂
+Nama saya adalah *{}*\nBot Pro Telegram yang Kuat untuk Mengelola Grup Anda, jangan ragu untuk menambahkan ke grup Anda !!
+━━━━━━━━━━━━━━━━━━━━
+_Dikelola Oleh_ [Yunus Zend](Https://t.me/ZendYNS) 💻
+
+࿇Tambahkan saya ke group mu dan jadikan saya *admin!!* 🧑‍💻
+
+࿇Klik /help 💁‍♂ untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu kinerja grup kamu.
 """
 
 
 HELP_STRINGS = """
-Hey there! My name is *{}*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-*Main* commands available:
- 💠 - /start: start the bot
- 💠 - /help: PM's you this message.
- 💠 - /help <module name>: PM's you info about that module.
- 💠 - /source: Information about my source.
- 💠 - /settings:
-   🔹 - in PM: will send you your settings for all supported modules.
-   🔹 - in a group: will redirect you to pm, with all that chat's settings.
+Hei kamu yg disana! Nama saya adalah *{}*.
+Saya bot manajemen grup modular dengan beberapa tambahan yang menyenangkan! Lihatlah yang berikut ini untuk mendapatkan gambaran tentang beberapa hal yang dapat saya bantu.
+
+*Perintah utama* tersedia!!:
+ ࿇ /start: Mulai bot ini
+ ࿇ /help: PM Anda pesan ini.
+ ࿇ /help <module name>: PM info Anda tentang modul itu.
+ ࿇ /settings:
+   ☞  ✐ Di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+   ☞  ✐ Di dalam Group: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 {}
-And the following:
-""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
+Dan berikut Command-Command yg dapat digunakan dalam grup:
+""".format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nSemua perintah bisa digunakan dengan / atau!.\n")
 
 
 
@@ -58,8 +64,8 @@ def vercheck() -> str:
 
 
 SOURCE_STRING = """
-⚡I'm built in python3, using the python-telegram-bot library, and am fully opensource - you can find what makes me tick [here](https://github.com/Sur-vivor/CinderellaProBot)
-⚡You Can Clone Me [Here](https://heroku.com/deploy?template=https://github.com/Sur-vivor/CinderellaProBot.git)
+⚡Bot ini bisa memutar musik di VCG GROUP atau panggilan suara grup Anda [Klik Disini](Https://t.me/MightyMusic_bot)
+⚡Kamu bisa menggunakan saya [klik Disini](Https://t.me/MightyMusic_bot)
 """
 
 
@@ -78,7 +84,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/511ad504656e712b88235.jpg"
+    img = "https://telegra.ph/file/58476a0d75fc70547fb1d.jpg"
 else:
   img = START_IMG    
     
@@ -164,8 +170,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Heya,{} Here..\nHow can I help you? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))]]))
+        update.effective_message.reply_text("Hallo,{} Disini..\nBagaimana saya bisa membantu anda? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
+                                                [[InlineKeyboardButton(text="🔉 Help",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -179,8 +185,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🤝Help",callback_data="help_back"),InlineKeyboardButton(text="🛡Creator🛡",url="https://t.me/Surv_ivor")]]
-    keyboard += [[InlineKeyboardButton(text="🌐Connect Group", callback_data="main_connect"),InlineKeyboardButton(text="⚜️Add Me⚜️",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="🔉 Help",callback_data="help_back"),InlineKeyboardButton(text="💻 Creator 💻",url="https://t.me/ZendYNS")]]
+    keyboard += [[InlineKeyboardButton(text="💭 Group Support",url="Https://t.me/KingUserbotSupport"),InlineKeyboardButton(text="➕ Tambah Saya ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
@@ -235,7 +241,7 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🚶🏻‍♂️Back🚶🏻‍♂️", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="🧸 BACK 🧸", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -280,15 +286,15 @@ def get_help(bot: Bot, update: Update):
 
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="⚜️Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡Contact Creator",url="https://t.me/Surv_ivor")]]))
+                                                [[InlineKeyboardButton(text="🔉 Help",url="t.me/{}?start=help".format(bot.username))],  
+                                                [InlineKeyboardButton(text="🛡 Contact Creator",url="https://t.me/ZendYNS")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🚶‍♂️Back🚶‍♂️", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🧸 BACK 🧸", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -343,7 +349,7 @@ def settings_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🏃🏻‍♂️Back🏃🏻‍♂️",
+                                         [[InlineKeyboardButton(text="🧸 BACK 🧸",
                                                                 callback_data="stngs_back({})".format(chat_id))]]))
 
         elif prev_match:
@@ -601,7 +607,7 @@ def main():
             updater.bot.set_webhook(url=URL + TOKEN)
 
     else:
-        LOGGER.info("Cinderella running...")
+        LOGGER.info("Moghty Warrior running...")
         updater.start_polling(timeout=15, read_latency=4)
         client.run_until_disconnected()
 
