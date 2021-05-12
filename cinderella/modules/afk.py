@@ -47,7 +47,7 @@ def no_longer_afk(bot: Bot, update: Update):
         try:        
             options = [
           
-            '{} is back online!'
+            '{} Sudah Kembali Online!'
      
                     ]
             chosen_option = random.choice(options)
@@ -90,7 +90,7 @@ def reply_afk(bot: Bot, update: Update):
                 try:
                     chat = bot.get_chat(user_id)
                 except BadRequest:
-                    print("Error: Could not fetch userid {} for AFK module".
+                    print("Error: Tidak dapat mengambil ID pengguna {} Dengan Module 𝗔𝗙𝗞".
                           format(user_id))
                     return
                 fst_name = chat.first_name
@@ -113,19 +113,19 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
         if not user.reason:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is afk".format(fst_name)
+            res = "{} Telah afk".format(fst_name)
             update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} is AFK.\nReason: {}".format(fst_name, user.reason)
+            res = "{} Telah afk.\nKarena: {}".format(fst_name, user.reason)
             update.effective_message.reply_text(res)
 
 
 __help__ = """
- - /afk <reason>: mark yourself as AFK(away from keyboard).
- - brb <reason>: same as the afk command - but not a command this.
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+ - /afk <Alasan>: Untuk Penggunaan Afk(Dengan Keyboard).
+ - brb <Alasan>: Sama Seperti afk - Namun Dalam Penggunaan Hanya Saja Beda Kata Antara /afk dan brb.
+Penggunaan Sama Seperti afk, Untuk Ketika Anda Off Bisa Menggunakan /afk atau brb , Jika Ada Yang Mengetagnya Maka Bot Kami Yang Menjawab!
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
