@@ -24,7 +24,7 @@ RUN_STRINGS = (
     "Semoga peluang selalu menguntungkan Anda.",
     "Kata-kata terakhir yang terkenal.",
     "Dan mereka menghilang selamanya, tidak pernah terlihat lagi.",
-    "\" Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot! \ "- orang ini",
+    "Oh, lihat aku! Saya sangat keren, saya bisa lari dari bot! \ "- orang ini",
     "Ya ya, cukup ketuk / pukul aku.",
     "Ini, ambil cincin ini dan pergilah ke Mordor saat kamu melakukannya.",
     "Legenda mengatakan, mereka masih berjalan ...",
