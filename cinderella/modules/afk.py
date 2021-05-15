@@ -47,7 +47,7 @@ def no_longer_afk(bot: Bot, update: Update):
         try:        
             options = [
           
-            '{} Sudah Kembali Online!'
+            'Anak asu si {} Sudah Kembali Online!'
      
                     ]
             chosen_option = random.choice(options)
@@ -113,12 +113,12 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
         if not user.reason:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} Telah afk".format(fst_name)
+            res = "anak asu bernama {} Telah afk".format(fst_name)
             update.effective_message.reply_text(res)
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} Telah afk.\nKarena: {}".format(fst_name, user.reason)
+            res = "si {} sok sok an afk.\nKarena: {}".format(fst_name, user.reason)
             update.effective_message.reply_text(res)
 
 
