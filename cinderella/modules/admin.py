@@ -459,14 +459,14 @@ def adminlist(bot: Bot, update: Update):
     administrators = update.effective_chat.get_administrators()
     user = update.effective_user
     msg = update.effective_message
-    text = "Admins in *{}*:".format(update.effective_chat.title or "this chat")
+    text = "Daftar admin yg ada di *{}*:".format(update.effective_chat.title or "this chat")
     for admin in administrators:
         user = admin.user
         status = admin.status
         name = "[{}](tg://user?id={})".format(user.first_name + (user.last_name or ""), user.id)
         if status == "creator":
-            text += "\n 🔱 *Creator*:"
-            text += "\n` 🤴🏻 `{} \n\n ⚜️ *Administrators*:".format(name)
+            text += "\n 🔱 *Pembuat*:"
+            text += "\n` 🤴🏻 `{} \n\n ⚜️ *Daftar Admin*:".format(name)
     for admin in administrators:
         user = admin.user
         status = admin.status
@@ -476,7 +476,7 @@ def adminlist(bot: Bot, update: Update):
            
         if status == "administrator":
             text += "\n` 👮🏻‍♂️ `{}".format(name)
-            members = "\n\n*Members:*\n`👨‍👩‍👧‍👦 ` {} users".format(count)
+            members = "\n\n*Jumlah anggota:*\n`👨‍👩‍👧‍👦 ` {} users".format(count)
             
     msg.reply_text(text + members, parse_mode=ParseMode.MARKDOWN)
 
