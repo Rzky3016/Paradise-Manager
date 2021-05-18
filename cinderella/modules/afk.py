@@ -27,10 +27,7 @@ def afk(bot: Bot, update: Update):
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
-    update.effective_message.reply_text("{} sok sok an afk 😒".format(fname))
-    update.effective_message.reply_text("{} So sibuk pake AFK".format(fname))
-    update.effective_message.reply_text("{} Si anjing masih sok sibuk AFK".format(fname))
-    update.effective_message.reply_text("{} Kontol telah afk ".format(fname))
+    update.effective_message.reply_text("{} Telah AFK".format(fname))
 
     
 @run_async
@@ -49,10 +46,10 @@ def no_longer_afk(bot: Bot, update: Update):
         firstname = update.effective_user.first_name
         try:        
             options = [
-          
-            '{} Sudah Kembali Online!'
-     
-                    ]
+                '{} akhirnya di sini!', '{} Sudah kembali!', '{} sekarang dalam obrolan!',
+                '{} sudah bangun dari mati!', '{} Sudah kembali online!', '{} si pea udah disini!',
+                'Telah kembali! {}', 'Dimana {}?\nDi dalam chat!'
+            ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
         except:
@@ -121,7 +118,7 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "✥ {} Sedang AFK !!🗿\n✥ Alasan ➠ {}".format(fst_name, user.reason)
+            res = "✥ {} Sedang AFK !!\n✥ Alasan ➠ {}".format(fst_name, user.reason)
             update.effective_message.reply_text(res)
 
 
