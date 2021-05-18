@@ -49,8 +49,8 @@ def get(bot, update, notename, show_none=True, no_format=False):
                     bot.forward_message(chat_id=chat_id, from_chat_id=MESSAGE_DUMP, message_id=note.value)
                 except BadRequest as excp:
                     if excp.message == "Message to forward not found":
-                        message.reply_text("This message seems to have been lost - I'll remove it "
-                                           "from your notes list.")
+                        message.reply_text"Pesan ini sepertinya telah hilang - saya akan menghapusnya"
+                                           "dari daftar catatan Anda.")
                         sql.rm_note(chat_id, notename)
                     else:
                         raise
@@ -58,11 +58,11 @@ def get(bot, update, notename, show_none=True, no_format=False):
                 try:
                     bot.forward_message(chat_id=chat_id, from_chat_id=chat_id, message_id=note.value)
                 except BadRequest as excp:
-                    if excp.message == "Message to forward not found":
-                        message.reply_text("Looks like the original sender of this note has deleted "
-                                           "their message - sorry! Get your bot admin to start using a "
-                                           "message dump to avoid this. I'll remove this note from "
-                                           "your saved notes.")
+                    if excp.message == "Pesan untuk diteruskan tidak ditemukan":
+                        message.reply_text("Sepertinya pengirim asli catatan ini telah menghapus"
+                                           "pesan mereka - maaf! Minta admin bot Anda untuk mulai menggunakan"
+                                           "pesan buang untuk menghindari ini. Saya akan menghapus catatan ini dari"
+                                           "catatan simpanan Anda.")
                         sql.rm_note(chat_id, notename)
                     else:
                         raise
@@ -106,7 +106,7 @@ def get(bot, update, notename, show_none=True, no_format=False):
                     LOGGER.warning("Message was: %s", str(note.value))
         return
     elif show_none:
-        message.reply_text("This note doesn't exist")
+        message.reply_text("Catatan ini tidak ada")
 
 
 @run_async
@@ -136,7 +136,7 @@ def save(bot: Bot, update: Update):
     note_name, text, data_type, content, buttons = get_note_type(msg)
 
     if data_type is None:
-        msg.reply_text("Dude, there's no note")
+        msg.reply_text("Tolol, tidak ada catatan")
         return
     
     if len(text.strip()) == 0:
@@ -145,19 +145,19 @@ def save(bot: Bot, update: Update):
     sql.add_note_to_db(chat_id, note_name, text, data_type, buttons=buttons, file=content)
 
     msg.reply_text(
-        "Your {note_name} note is added.\nGet it with /get {note_name}, or #{note_name}".format(note_name=note_name))
+        "{note_name} berhasil ditambahkan.\nKetik dengan format /get {note_name}, atau #{note_name}".format(note_name=note_name))
 
     if msg.reply_to_message and msg.reply_to_message.from_user.is_bot:
         if text:
-            msg.reply_text("Seems like you're trying to save a message from a bot. Unfortunately, "
-                           "bots can't forward bot messages, so I can't save the exact message. "
-                           "\nI'll save all the text I can, but if you want more, you'll have to "
-                           "forward the message yourself, and then save it.")
+            msg.reply_text("Sepertinya Anda mencoba menyimpan pesan dari bot. Sayangnya," 
+                           "bot tidak dapat meneruskan pesan bot, jadi saya tidak bisa menyimpan pesan persisnya." 
+                           "\ nSaya akan menyimpan semua SMS saya bisa, tetapi jika Anda menginginkan lebih, Anda harus "
+                           " meneruskan pesan itu sendiri, lalu menyimpannya. ")
         else:
-            msg.reply_text("Bots are kinda handicapped by telegram, making it hard for bots to "
-                           "interact with other bots, so I can't save this message "
-                           "like I usually would - do you mind forwarding it and "
-                           "then saving that new message? Thanks!")
+            msg.reply_text("Bot agak cacat oleh telegram, sehingga menyulitkan bot untuk"
+                           "berinteraksi dengan bot lain, jadi saya tidak bisa menyimpan pesan ini" 
+                           "seperti biasanya - apakah Anda keberatan meneruskannya dan" 
+                           "kemudian menyimpan pesan baru itu ? Terima kasih! ")
         return
 
 
@@ -169,9 +169,9 @@ def clear(bot: Bot, update: Update, args: List[str]):
         notename = args[0]
 
         if sql.rm_note(chat_id, notename):
-            update.effective_message.reply_text("Successfully removed note.")
+            update.effective_message.reply_text("Berhasil menghapus catatan")
         else:
-            update.effective_message.reply_text("That's not a note in my database!")
+            update.effective_message.reply_text("Itu bukan catatan di database saya!")
 
 
 @run_async
@@ -181,17 +181,17 @@ def list_notes(bot: Bot, update: Update):
     user = update.effective_user  # type: Optional[User]
     note_list = sql.get_all_chat_notes(chat_id)
     chat_name = chat.title or chat.first or chat.username
-    msg = "*List of notes in {}:*\n"
-    des = "You can get notes by using `/get notename`, or `#notename`.\n"
+    msg = "*Daftar catatan yg terdapat di {}:*\n"
+    des = "kamu bisa mendapat catatan dengan format `/get notename`, atau `#notename`.\n"
     for note in note_list:
-        note_name = (" • `{}`\n".format(note.name))
+        note_name = (" ⎆ `{}`\n".format(note.name))
         if len(msg) + len(note_name) > MAX_MESSAGE_LENGTH:
             update.effective_message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
             msg = ""
         msg += note_name
 
-    if msg == "*List of notes in {}:*\n":
-        update.effective_message.reply_text("No notes in this chat!")
+    if msg == "*Daftar catatan yg terdapat di {}:*\n":
+        update.effective_message.reply_text("Tidak ada catatan dalam chat group ini!")
 
     elif len(msg) != 0:
         update.effective_message.reply_text(msg.format(chat_name) + des, parse_mode=ParseMode.MARKDOWN)
