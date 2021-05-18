@@ -28,6 +28,9 @@ def afk(bot: Bot, update: Update):
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
     update.effective_message.reply_text("{} sok sok an afk 😒".format(fname))
+    update.effective_message.reply_text("{} So sibuk pake AFK".format(fname))
+    update.effective_message.reply_text("{} Si anjing masih sok sibuk AFK".format(fname))
+    update.effective_message.reply_text("{} Kontol telah afk ".format(fname))
 
     
 @run_async
