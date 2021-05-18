@@ -49,7 +49,7 @@ def get(bot, update, notename, show_none=True, no_format=False):
                     bot.forward_message(chat_id=chat_id, from_chat_id=MESSAGE_DUMP, message_id=note.value)
                 except BadRequest as excp:
                     if excp.message == "Message to forward not found":
-                        message.reply_text"Pesan ini sepertinya telah hilang - saya akan menghapusnya"
+                        message.reply_text("Pesan ini sepertinya telah hilang - saya akan menghapusnya"
                                            "dari daftar catatan Anda.")
                         sql.rm_note(chat_id, notename)
                     else:
