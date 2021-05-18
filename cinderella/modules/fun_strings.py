@@ -70,6 +70,11 @@ SLAP_TEMPLATES = (
     "{user2} sebenarnya adalah babu dari {user1}.",
     "{user1} membawa {user2} ke semak semak.",
     "{user1} sebenarnya menyukai dan mencintai {user2}.",
+    "{user1} membawa kabur {user2} untuk menjalani kawin lari.",
+    "{user2} tidak sengaja terjatuh lalu memeluk dan mencium {user1}.",
+    "{user1} menghantam kepala {user2} dengan kayu jati.",
+    "{user1} membawa kabur {user2} untuk ena ena di kamar.",
+)
 )
 
 PING_STRING = (
