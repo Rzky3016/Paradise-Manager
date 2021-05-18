@@ -118,7 +118,7 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
         else:
             if int(userc_id) == int(user_id):
                 return
-            res = "{} sedang afk !!🗿\nAlasan ☞ {}".format(fst_name, user.reason)
+            res = "<b>{} sedang afk !!</b>🗿\n<b>Alasan</b> ☞ {}".format(fst_name, user.reason)
             update.effective_message.reply_text(res)
 
 
