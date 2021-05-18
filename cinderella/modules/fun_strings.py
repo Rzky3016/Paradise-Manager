@@ -75,7 +75,6 @@ SLAP_TEMPLATES = (
     "{user1} menghantam kepala {user2} dengan kayu jati.",
     "{user1} membawa kabur {user2} untuk ena ena di kamar.",
 )
-)
 
 PING_STRING = (
     "PONG!!",
