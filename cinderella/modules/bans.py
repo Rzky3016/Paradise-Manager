@@ -203,7 +203,7 @@ def kick(bot: Bot, update: Update, args: List[str]) -> str:
     res = chat.unban_member(user_id)  # unban on current user = kick
     if res:
         bot.send_sticker(chat.id, KICK_STICKER)  # banhammer marie sticker
-        bot.sendMessage(chat.id, "{} has been Kicked by {}!".format(mention_html(member.user.id, member.user.first_name), mention_html(user.id, user.first_name)),
+        bot.sendMessage(chat.id, "{} telah Ditendang oleh {}!".format(mention_html(member.user.id, member.user.first_name), mention_html(user.id, user.first_name)),
                         parse_mode=ParseMode.HTML)
         log = "<b>{}:</b>" \
               "\n#KICKED" \
@@ -376,7 +376,7 @@ def selfunban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat_id = int(args[0])
     except:
-        message.reply_text("Give a valid chat ID.")
+        message.reply_text("berikan saya chat ID yg VALID.")
         return
 
     chat = bot.getChat(chat_id)
