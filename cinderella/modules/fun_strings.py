@@ -74,11 +74,23 @@ SLAP_TEMPLATES = (
     "{user2} tidak sengaja terjatuh lalu memeluk dan mencium {user1}.",
     "{user1} menghantam kepala {user2} dengan kayu jati.",
     "{user1} membawa kabur {user2} untuk ena ena di kamar.",
+    "{user2} kalah berantem sama {user2} karena maennya nganduan.",
+    "{user1} ngocokin {user2} untuk di jadikan bacol.",
+    "{user2} membunuh {user1} dengan pisau yang tajam , sehingga badannya terbelah.",
+    "{user1} sebenarnya suka dengan {user2} cuman gak mau ngungkapin.",
+    "{user1} adalah pelaku korban pemerkosaan wanita.",
+    "{user1} kerjaannya mencabuli anak kecil yang tidak bersalah.",
+    "{user1} selalu kena buli oleh teman sekolahnya.",
+    "{user1} selalu kena salah padahal dia baik ke orang itu :'v.",
+    "{user1} buaya percintaan yang sering mempermainkan perasaan wanita.",
+    "{user2} tidak sengaja terdorong atau terjatuh oleh {user1} di sebuah tempat dan langsung ena ena.",
+    "{user1} adalah gay nomor 1 di dunia ini.",
+    "{user2} sebenernnya adalah suka sesama jenis.",
 )
 
 PING_STRING = (
     "PONG!!",
-    "I am here!",
+    "saya disini!",
 )
 
 ITEMS = (
@@ -108,38 +120,38 @@ ITEMS = (
 )
 
 THROW = (
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
+    "melempar",
+    "teman kencan",
+    "Babi kau",
+    "lemparan",
 )
 
 HIT = (
-    "hits",
-    "whacks",
-    "slaps",
-    "smacks",
-    "bashes",
-    "pats",
+    "Kids Zaman Now",
+    "Merendah",
+    "Tak slap kau",
+    "menampar",
+    "pesta",
+    "tepukan",
 
 )
 
 ABUSE_STRINGS = (
-    "Fuck off",
-    "Stfu go fuck yourself",
-    "Ur mum gey",
-    "Ur dad lesbo",
-    "Bsdk",
-    "Nigga",
-    "Ur granny tranny",
-    "you noob",
-    "Relax your Rear,ders nothing to fear,The Rape train is finally here",
-    "Stfu bc",
-    "Stfu and Gtfo U nub",
-    "GTFO bsdk",
-    "CUnt",
-    " Gay is here",
-    "Ur dad gey bc ",
+    "Pergi kau babi",
+    "Pergi sendiri njing!",
+    "Gay kau",
+    "Najis lesbi",
+    "Bacot anjg",
+    "Dasar miskin",
+    "Anak mana kau",
+    "Lu noob",
+    "Santai Belakang Anda, jangan takut, Kereta Pemerkosaan akhirnya tiba",
+    "Bacot kntl",
+    "Udah noob gak tau diri",
+    "Si anjg malah mencet",
+    "Vagina",
+    "Gay pula kau anjg , pergi sana!",
+    "Dasar gay!",
 )
 
 EYES = [
@@ -315,18 +327,18 @@ EARS = [
 ]
 
 TOSS = (
-    "Heads",
-    "Tails",
+    "Kepala",
+    "Ekor",
 )
 
 DECIDE = (
-    "Yes.",
-    "NoU.",
-    "Maybe."
+    "Ya.",
+    "Gak.",
+    "Mungkin."
 )
 
 TABLE = (
     "(╯°□°）╯彡 ┻━┻",
-    "I ran out of tables, will order more.",
-    "Go do some work instead of flippin tables."
+    "Saya kehabisan meja, akan memesan lebih banyak.",
+    "Lakukan beberapa pekerjaan alih-alih tabel flippin."
 )
