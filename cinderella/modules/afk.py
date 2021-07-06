@@ -124,12 +124,12 @@ def check_afk(bot, update, user_id, fst_name, userc_id):
 
 __help__ = """
  - /afk <Alasan>: Untuk Penggunaan Afk(Dengan Keyboard).
- - brb <Alasan>: Sama Seperti afk - Namun Dalam Penggunaan Hanya Saja Beda Kata Antara /afk dan brb.
-Penggunaan Sama Seperti afk, Untuk Ketika Anda Off Bisa Menggunakan /afk atau brb , Jika Ada Yang Mengetagnya Maka Bot Kami Yang Menjawab!
+ - /off <Alasan>: Sama Seperti afk - Namun Dalam Penggunaan Hanya Saja Beda Kata Antara /afk dan /off.
+Penggunaan Sama Seperti afk, Untuk Ketika Anda Off Bisa Menggunakan /afk atau /off , Jika Ada Yang Mengetagnya Maka Bot Kami Yang Menjawab!
 """
 
 AFK_HANDLER = DisableAbleCommandHandler("afk", afk)
-AFK_REGEX_HANDLER = DisableAbleRegexHandler("(?i)brb", afk, friendly="afk")
+AFK_REGEX_HANDLER = DisableAbleRegexHandler("(?i)off", afk, friendly="afk")
 NO_AFK_HANDLER = MessageHandler(Filters.all & Filters.group, no_longer_afk)
 AFK_REPLY_HANDLER = MessageHandler(Filters.all & Filters.group, reply_afk)
 
