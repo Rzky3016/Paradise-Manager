@@ -85,8 +85,8 @@ def report(bot: Bot, update: Update) -> str:
                                                               mention_html(reported_user.id, reported_user.first_name))
             
             msg = "<b>{}:</b>" \
-                  "\n<b>Reported user:</b> {} (<code>{}</code>)" \
-                  "\n<b>Reported by:</b> {} (<code>{}</code>)".format(html.escape(chat.title),
+                  "\n<b>❗Reported user:</b> {} (<code>{}</code>)" \
+                  "\n<b>⪩ Reported by:</b> {} (<code>{}</code>)".format(html.escape(chat.title),
                                                                       mention_html(
                                                                           reported_user.id,
                                                                           reported_user.first_name),
