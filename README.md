@@ -1,25 +1,25 @@
-<h2 align="center">MIGHTY WARRIOR</h2>
+<h2 align="center">PARADISE MANAGER</h2>
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badges/)  
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-### Bot modular yg bisa membantu kinerja grupmu dengan berbagai fitur lebih
+### Bot Group Manager Yang Membuat Groupmu Aman Dan Menarik Dengan Sentuhan Berbagai Fitur Menarik Di dalamnya
 
 <p align="center">
-  <a href="https://github.com/Yunus-ZEND/MightyWarriorBot/fork">
-    <img src="https://img.shields.io/github/forks/Yunus-ZEND/MightyWarriorBot?label=Fork&style=social">
+  <a href="https://github.com/Rzky3016/Paradise-Manager/fork">
+    <img src="https://img.shields.io/github/forks/Rzky3016/Paradise-Manager?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/Yunus-ZEND/MightyWarriorBot">
-    <img src="https://img.shields.io/github/stars/Yunus-ZEND/MightyWarriorBot?style=social">
+  <a href="https://github.com/Rzky-3016/Paradise-Manager">
+    <img src="https://img.shields.io/github/stars/Rzky3016/Paradise-Manager?style=social">
   </a>
 </p>
 
-![Mighty Warrior Logo](https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg)
+![Paradise Manager Logo](https://telegra.ph/file/09a44cd8b24d48188e9ca.jpg)
 
-### <h3 align="center">DEPLOY KE HEROKU</h3>
+### <h3 align="center">DEPLOY TO HEROKU</h3>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Yunus-ZEND/MightyWarriorBot"> <img src="https://img.shields.io/badge/Click%20Untuk%20Deploy-green?style=flat&logo=heroku" width="200" height="32.45" /></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Rzky3016/Paradise-Manager"> <img src="https://img.shields.io/badge/Click%20Untuk%20Deploy-green?style=flat&logo=heroku" width="200" height="32.45" /></a></p>
 
 #### class Development(Config):
    - `OWNER_ID` = 1118936839  # my telegram ID
@@ -64,6 +64,6 @@ The following env variables are supported:
  - `BAN_STICKER`: Which sticker to use when banning people.
  - `ALLOW_EXCL`: Whether to allow using exclamation marks ! for commands as well as /.
 ```
-<p align="center"><a href="https://t.me/ZendYNS"><img src="https://img.shields.io/badge/My%20Contact%3F-click here-magenta?&style=flat-square?&logo=telegram" width=150px></a></p> <p align="center"><a href="https://t.me/KingUserbotSupport"><img src="https://img.shields.io/badge/Group%20Support%3F-click here-yellow?&style=flat-square?&logo=telegram" width=170px></a></p>
+<p align="center"><a href="https://t.me/Nopegoodloking"><img src="https://img.shields.io/badge/My%20Contact%3F-click here-magenta?&style=flat-square?&logo=telegram" width=150px></a></p> <p align="center"><a href="https://t.me/paradisesupportch"><img src="https://img.shields.io/badge/Group%20Support%3F-click here-yellow?&style=flat-square?&logo=telegram" width=170px></a></p>
 
-#### anda bisa melihat saya di telegram contoh: [@Mightygrouphelp_bot](https://t.me/Mightygrouphelp_bot)
+#### anda bisa melihat saya di telegram contoh: [@ParadiseManagerbot](https://t.me/ParadiseManagerbot)
