@@ -2,7 +2,7 @@
 #
 # Licensed under the Raphielscape Public License, Version 1.d (the "License");
 # you may not use this file except in compliance with the License.
-""" Userbot module containing userid, chatid and log commands"""
+""" bot module containing userid, chatid and log commands"""
 
 from asyncio import sleep
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, bot
@@ -19,8 +19,8 @@ from telethon.errors import (
     ChannelPublicGroupNaError)
 from telethon.utils import get_input_location
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantsBots
-from userbot.events import register
-from userbot.modules.admin import get_user_from_event
+from cinderella.events import register
+from cinderella.modules.admin import get_user_from_event
 from telethon.utils import pack_bot_file_id
 
 
@@ -116,7 +116,7 @@ async def kickme(leave):
 async def unmute_chat(unm_e):
     """ For .unmutechat command, unmute a muted chat. """
     try:
-        from userbot.modules.sql_helper.keep_read_sql import unkread
+        from cinderella.modules.sql_helper.keep_read_sql import unkread
     except AttributeError:
         await unm_e.edit('`Running on Non-SQL Mode!`')
         return
@@ -149,7 +149,7 @@ async def mute_chat(mute_e):
 async def keep_read(message):
     """ The mute logic. """
     try:
-        from userbot.modules.sql_helper.keep_read_sql import is_kread
+        from cinderella.modules.sql_helper.keep_read_sql import is_kread
     except AttributeError:
         return
     kread = is_kread()
