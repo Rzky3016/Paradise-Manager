@@ -32,16 +32,16 @@ PM_START_TEXT = """
 _Hallo_ *{}* 🙋‍♂
 Nama saya adalah *{}*\nBot Pro Telegram yang Kuat untuk Mengelola Grup Anda, jangan ragu untuk menambahkan ke grup Anda !!
 ━━━━━━━━━━━━━━━━━━━━
-_Dikelola Oleh_ [Rzky](Https://t.me/Nopegoodloking) 💻
+_Dikelola Oleh_ [Rzky](Https://t.me/Nopegoodloking) ☕
 
-⪩ Tambahkan saya ke group mu dan Wajib jadikan saya **admin!!**  🧑‍💻
+⪩ Tambahkan saya ke group mu dan Wajib jadikan saya **admin!!**  👮🏻‍♂️
 
-⪩ Klik /help 💁‍♂ untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu Kelancaran grup kamu.
+⪩ Klik /help untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu Kelancaran grup kamu.
 """
 
 
 HELP_STRINGS = """
-Eyyoo... ! Nama saya adalah *{}*.
+Eyyoo... ! Nama saya *{}*.
 Saya bot manager grup, untuk membantu keamanan group anda dengan beberapa tambahan fitur yang menarik! Lihatlah yang berikut ini untuk mendapatkan gambaran tentang beberapa hal yang dapat saya bantu.
 
 *Perintah utama* tersedia!!:
@@ -49,8 +49,8 @@ Saya bot manager grup, untuk membantu keamanan group anda dengan beberapa tambah
  ࿇ /help: PM Anda pesan ini.
  ࿇ /help <module name>: PM info Anda tentang modul itu.
  ࿇ /settings:
-   ☞  ✐ Di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
-   ☞  ✐ Di dalam Group: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
+     ⪩ Di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+     ⪩ Di dalam Group: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 {}
 Dan berikut Command-Command yg dapat digunakan dalam grup:
 """.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nSemua perintah bisa digunakan dengan / atau!.\n")
@@ -170,8 +170,8 @@ def start(bot: Bot, update: Update, args: List[str]):
         else:
             send_start(bot, update)
     else:
-        update.effective_message.reply_text("Hallo,{} Disini..\nBagaimana saya bisa membantu anda? 🙂".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
-                                                [[InlineKeyboardButton(text="🔉 Help",url="t.me/{}?start=help".format(bot.username))]]))
+        update.effective_message.reply_text("Hallo,{} Sedia Membantu..\nApa Yang Bisa Saya Bantu? ".format(bot.first_name),reply_markup=InlineKeyboardMarkup(
+                                                [[InlineKeyboardButton(text="🚧 Help",url="t.me/{}?start=help".format(bot.username))]]))
 
 def send_start(bot, update):
     #Try to remove old message
@@ -185,7 +185,7 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🔉 Help",callback_data="help_back"),InlineKeyboardButton(text="💻 Creator 💻",url="https://t.me/Nopegoodloking")]]
+    keyboard = [[InlineKeyboardButton(text="🚧 Help",callback_data="help_back"),InlineKeyboardButton(text="💻 Creator 💻",url="https://t.me/Nopegoodloking")]]
     keyboard += [[InlineKeyboardButton(text="💭 Group Support",url="Https://t.me/paradisesupportch"),InlineKeyboardButton(text="➕ Tambah Saya ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
@@ -241,7 +241,7 @@ def help_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🧸 BACK 🧸", callback_data="help_back")]]))
+                                         [[InlineKeyboardButton(text="◀️ BACK ▶️", callback_data="help_back")]]))
 
         elif prev_match:
             curr_page = int(prev_match.group(1))
@@ -287,14 +287,14 @@ def get_help(bot: Bot, update: Update):
         update.effective_message.reply_text("Contact me in PM to get the list of possible commands.",
                                             reply_markup=InlineKeyboardMarkup(
                                                 [[InlineKeyboardButton(text="🚧 Help",url="t.me/{}?start=help".format(bot.username))],  
-                                                [InlineKeyboardButton(text="🛡 Contact Dev",url="https://t.me/Nopegoodloking")]]))
+                                                [InlineKeyboardButton(text="📱 Contact Dev",url="https://t.me/Nopegoodloking")]]))
         return
 
     elif len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
         module = args[1].lower()
         text = "Here is the available help for the *{}* module:\n".format(HELPABLE[module].__mod_name__) \
                + HELPABLE[module].__help__
-        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="🧸 BACK 🧸", callback_data="help_back")]]))
+        send_help(chat.id, text, InlineKeyboardMarkup([[InlineKeyboardButton(text="◀️ BACK ▶️", callback_data="help_back")]]))
 
     else:
         send_help(chat.id, HELP_STRINGS)
@@ -349,7 +349,7 @@ def settings_button(bot: Bot, update: Update):
             query.message.reply_text(text=text,
                                      parse_mode=ParseMode.MARKDOWN,
                                      reply_markup=InlineKeyboardMarkup(
-                                         [[InlineKeyboardButton(text="🧸 BACK 🧸",
+                                         [[InlineKeyboardButton(text="◀️ BACK ▶️",
                                                                 callback_data="stngs_back({})".format(chat_id))]]))
 
         elif prev_match:
