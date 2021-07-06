@@ -69,6 +69,7 @@ The following env variables are supported:
 #### anda bisa melihat saya di telegram contoh: [@ParadiseManagerbot](https://t.me/ParadiseManagerbot)
 
 
-# SPECIAL THANKS TO :
-⪩ [APIS](https://github/apisuserbot)
-⪩ [YUNUS ZEND](https://github/Yunus-ZEND)
+### SPECIAL THANKS TO :
+⪩ [APIS](https://github.com/apisuserbot)
+
+⪩ [YUNUS ZEND](https://github.com/Yunus-ZEND)
