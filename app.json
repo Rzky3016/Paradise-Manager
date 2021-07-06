@@ -7,7 +7,7 @@
          "plan": "heroku-postgresql"
       }
    ],
-   "description": "Bot Modular dengan fitur lebih untuk membantu kinerja grup kamu.",
+   "description": "Bot Group Manager Yang Membuat Groupmu Aman Dan Menarik Dengan Sentuhan Berbagai Fitur Menarik Di dalamnya",
    "env": {
       "ALLOW_EXCL": {
          "description": "Set this to True if you want ! to be a command prefix along with /",
@@ -59,16 +59,16 @@
       },      
       "OWNER_ID": {
          "description": "ID kamu sebagai pemilik sekaligus pembuat.",
-         "value": "1118936839"
+         "value": "1442431414"
       },
       "OWNER_NAME": {
          "description": "Nama kamu",
-         "value": "Yunus Zend"
+         "value": "Rizky"
       },
       "DEV_USERS": {
          "description": "ID untuk users who are Dev (can use /py etc.)",
          "required": false,
-         "value": "1118936839"
+         "value": "1442431414"
       },
       "CASH_API_KEY": {
          "description": "Diperlukan untuk currency converter",
@@ -85,7 +85,7 @@
       },
        "START_IMG": {
          "description": "letak disini sebuah gambar untuk awalan /start di bot",
-         "value": "https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg"    
+         "value": "https://telegra.ph/file/09a44cd8b24d48188e9ca.jpg"    
       },
       "API_OPENWEATHER": {
          "description": "Required for weather information",
@@ -108,12 +108,12 @@
       "SUDO_USERS": {
          "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai pengguna sudo.",
          "required": false,
-         "value": "1118936839"
+         "value": "1442431414"
       },
       "SUPPORT_USERS": {
          "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai pengguna dukungan (khusus gban perms).",
          "required": false,
-         "value": "1118936839"
+         "value": "1442431414"
       },
      
       "TOKEN": {
@@ -134,7 +134,7 @@
       "WHITELIST_USERS": {
          "description": "Daftar ID pengguna yang dipisahkan spasi yang ingin Anda tetapkan sebagai daftar putih - tidak dapat diblokir dengan bot Anda.",
          "required": false,
-         "value": "1118936839"
+         "value": "1442431414"
       },
       "WALL_API":{
          "description": "Kirim wall api",
@@ -163,8 +163,8 @@
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
     }
   ],
-   "name": "Cinderella",
-   "repository": "https://github.com/Yunus-ZEND/Mighty-Warrior",
-   "success_url": "https://telegram.dog/Mighty-Warrior",
-   "logo": "https://telegra.ph/file/0a7d20bf46d47ff0438ab.jpg"
+   "name": "Paradise Manager",
+   "repository": "https://github.com/Rzky3016/Paradise-Manager",
+   "success_url": "https://telegram.dog/Paradise-Manager",
+   "logo": "https://telegra.ph/file/09a44cd8b24d48188e9ca.jpg"
 }
