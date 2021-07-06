@@ -34,7 +34,7 @@ Nama saya adalah *{}*\nBot Pro Telegram yang Kuat untuk Mengelola Grup Anda, jan
 ━━━━━━━━━━━━━━━━━━━━
 _Dikelola Oleh_ [Rzky](Https://t.me/Nopegoodloking) 💻
 
-⪩ Tambahkan saya ke group mu dan Wajib jadikan saya *admin!!* 🧑‍💻
+⪩ Tambahkan saya ke group mu dan Wajib jadikan saya **admin!!**  🧑‍💻
 
 ⪩ Klik /help 💁‍♂ untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu Kelancaran grup kamu.
 """
