@@ -27,22 +27,22 @@ from cinderella.modules.connection import connect_button
 
 
 PM_START_TEXT = """
-*┗┓| MIGHTY HELPER GROUP | ┏┛*
+*┗┓| 𝙋𝘼𝙍𝘼𝘿𝙄𝙎𝙀 𝙈𝘼𝙉𝘼𝙂𝙀𝙍 | ┏┛*
 
 _Hallo_ *{}* 🙋‍♂
 Nama saya adalah *{}*\nBot Pro Telegram yang Kuat untuk Mengelola Grup Anda, jangan ragu untuk menambahkan ke grup Anda !!
 ━━━━━━━━━━━━━━━━━━━━
-_Dikelola Oleh_ [Yunus Zend](Https://t.me/ZendYNS) 💻
+_Dikelola Oleh_ [Rzky](Https://t.me/Nopegoodloking) 💻
 
-࿇Tambahkan saya ke group mu dan jadikan saya *admin!!* 🧑‍💻
+⪩ Tambahkan saya ke group mu dan Wajib jadikan saya *admin!!* 🧑‍💻
 
-࿇Klik /help 💁‍♂ untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu kinerja grup kamu.
+⪩ Klik /help 💁‍♂ untuk melihat fitur fitur yang bisa kamu gunakan untuk membantu Kelancaran grup kamu.
 """
 
 
 HELP_STRINGS = """
-Hei kamu yg disana! Nama saya adalah *{}*.
-Saya bot manajemen grup modular dengan beberapa tambahan yang menyenangkan! Lihatlah yang berikut ini untuk mendapatkan gambaran tentang beberapa hal yang dapat saya bantu.
+Eyyoo... ! Nama saya adalah *{}*.
+Saya bot manager grup, untuk membantu keamanan group anda dengan beberapa tambahan fitur yang menarik! Lihatlah yang berikut ini untuk mendapatkan gambaran tentang beberapa hal yang dapat saya bantu.
 
 *Perintah utama* tersedia!!:
  ࿇ /start: Mulai bot ini
@@ -57,15 +57,15 @@ Dan berikut Command-Command yg dapat digunakan dalam grup:
 
 
 
-VERSION = "6.0"
+VERSION = "1.0"
 
 def vercheck() -> str:
     return str(VERSION)
 
 
 SOURCE_STRING = """
-⚡Bot ini bisa memutar musik di VCG GROUP atau panggilan suara grup Anda [Klik Disini](Https://t.me/MightyMusic_bot)
-⚡Kamu bisa menggunakan saya [klik Disini](Https://t.me/MightyMusic_bot)
+🗿Bot ini bisa memutar musik di VCG GROUP atau panggilan suara grup Anda [Klik Disini](Https://t.me/paradisemusikbot)
+🗿Kamu bisa menggunakan saya [klik Disini](Https://t.me/paradisemusikbot)
 """
 
 
@@ -84,7 +84,7 @@ GDPR = []
 
 START_IMG = os.environ.get('START_IMG', None)
 if START_IMG is None:
-    img = "https://telegra.ph/file/58476a0d75fc70547fb1d.jpg"
+    img = "https://telegra.ph/file/09a44cd8b24d48188e9ca.jpg"
 else:
   img = START_IMG    
     
@@ -185,8 +185,8 @@ def send_start(bot, update):
     first_name = update.effective_user.first_name 
     text = PM_START_TEXT
 
-    keyboard = [[InlineKeyboardButton(text="🔉 Help",callback_data="help_back"),InlineKeyboardButton(text="💻 Creator 💻",url="https://t.me/ZendYNS")]]
-    keyboard += [[InlineKeyboardButton(text="💭 Group Support",url="Https://t.me/KingUserbotSupport"),InlineKeyboardButton(text="➕ Tambah Saya ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
+    keyboard = [[InlineKeyboardButton(text="🔉 Help",callback_data="help_back"),InlineKeyboardButton(text="💻 Creator 💻",url="https://t.me/Nopegoodloking")]]
+    keyboard += [[InlineKeyboardButton(text="💭 Group Support",url="Https://t.me/paradisesupportch"),InlineKeyboardButton(text="➕ Tambah Saya ➕",url="t.me/{}?startgroup=true".format(bot.username))]]
 
     update.effective_message.reply_photo(img, PM_START_TEXT.format(escape_markdown(first_name), escape_markdown(bot.first_name), OWNER_NAME, OWNER_ID), 
                                          reply_markup=InlineKeyboardMarkup(keyboard), disable_web_page_preview=True, parse_mode=ParseMode.MARKDOWN)
