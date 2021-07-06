@@ -67,3 +67,8 @@ The following env variables are supported:
 <p align="center"><a href="https://t.me/Nopegoodloking"><img src="https://img.shields.io/badge/My%20Contact%3F-click here-magenta?&style=flat-square?&logo=telegram" width=150px></a></p> <p align="center"><a href="https://t.me/paradisesupportch"><img src="https://img.shields.io/badge/Group%20Support%3F-click here-yellow?&style=flat-square?&logo=telegram" width=170px></a></p>
 
 #### anda bisa melihat saya di telegram contoh: [@ParadiseManagerbot](https://t.me/ParadiseManagerbot)
+
+
+# SPECIAL THANKS TO :
+⪩ [APIS](https://github/apisuserbot)
+⪩ [YUNUS ZEND](https://github/Yunus-ZEND)
