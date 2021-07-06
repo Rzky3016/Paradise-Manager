@@ -139,7 +139,7 @@ def new_member(bot: Bot, update: Update):
         for new_mem in new_members:
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text("Oh🤴Genos,My Owner has just joined your group.")
+                update.effective_message.reply_text("Oh Bro,My Owner has just joined your group.")
                 continue
             
             # Welcome Devs
@@ -159,7 +159,7 @@ def new_member(bot: Bot, update: Update):
                 update.effective_message.reply_text("Oof! A Whitelist User just joined!")
                
             elif new_mem.id == 1118936839:
-                update.effective_message.reply_text("Oh🤴Genos,My Creator/Developer has just joined your group.")
+                update.effective_message.reply_text("Oh Bro,My Creator/Developer has just joined your group.")
 
             # Make bot greet admins
             elif new_mem.id == bot.id:
@@ -248,7 +248,7 @@ def left_member(bot: Bot, update: Update):
            
             # Give the owner a special goodbye
             if left_mem.id == OWNER_ID:
-                update.effective_message.reply_text("Oi! Genos! My Owner left..")
+                update.effective_message.reply_text("Oi! Bro! My Owner left..")
                 return
        
             # if media goodbye, use appropriate function for it
