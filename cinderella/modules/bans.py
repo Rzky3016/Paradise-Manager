@@ -66,7 +66,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat.kick_member(user_id)
         bot.send_sticker(chat.id, BAN_STICKER)  
-        bot.sendMessage(chat.id, "🔨 {} was banned by {}!".format(mention_html(member.user.id, member.user.first_name), mention_html(user.id, user.first_name)),
+        bot.sendMessage(chat.id, "🔨 {} Banned Successfully By {}!".format(mention_html(member.user.id, member.user.first_name), mention_html(user.id, user.first_name)),
                         parse_mode=ParseMode.HTML)
         return log
 
